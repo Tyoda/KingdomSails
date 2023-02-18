@@ -14,7 +14,7 @@ public class KingdomSails implements WurmServerMod, Versioned, ItemTemplatesCrea
 
     public  boolean sailsCraftable = true;
 
-    public  boolean gmsNoUseupSail = true;
+    public  boolean gmsNoUseUpSail = true;
 
     public  final ArrayList<Integer> sailItemsIds = new ArrayList<>();
 
@@ -29,7 +29,7 @@ public class KingdomSails implements WurmServerMod, Versioned, ItemTemplatesCrea
     @Override
     public void configure(Properties properties) {
         sailsCraftable = Boolean.parseBoolean(properties.getProperty("sailsCraftable", String.valueOf(sailsCraftable)));
-        gmsNoUseupSail = Boolean.parseBoolean(properties.getProperty("gmsNoUseupSail", String.valueOf(gmsNoUseupSail)));
+        gmsNoUseUpSail = Boolean.parseBoolean(properties.getProperty("gmsNoUseUpSail", String.valueOf(gmsNoUseUpSail)));
     }
 
     @Override

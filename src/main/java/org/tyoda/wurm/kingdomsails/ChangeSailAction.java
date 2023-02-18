@@ -21,12 +21,6 @@ public class ChangeSailAction implements ModAction, ActionPerformer, BehaviourPr
     private final short actionId = (short) ModActions.getNextActionId();
     private final ActionEntry actionEntry;
 
-    public static final int[] shipIds = new int[]{
-            491, /* sailing boa */ 540, /* cog */ 541, /* corbita */
-            542, /* knarr */ 543  /* caravel */ /*490, /* rowing boat */
-    };
-
-
     public ChangeSailAction() {
         this.actionEntry = ActionEntry.createEntry(this.actionId, "Change sail", "changing sail",
             new int[]{
@@ -40,10 +34,6 @@ public class ChangeSailAction implements ModAction, ActionPerformer, BehaviourPr
 
     public short getActionId() {
         return this.actionId;
-    }
-
-    public ActionEntry getActionEntry() {
-        return this.actionEntry;
     }
 
     @Override
@@ -102,11 +92,11 @@ public class ChangeSailAction implements ModAction, ActionPerformer, BehaviourPr
                 }
                 ModelMeImpressed.setCustomModel(target, target.getTemplate().getModelName() + variant);
 
-                if (performer.getPower() < 4 && KingdomSails.getInstance().gmsNoUseupSail) {
+                performer.getCommunicator().sendNormalServerMessage("You apply the new sail to the ship.");
+                if (performer.getPower() < 4 && KingdomSails.getInstance().gmsNoUseUpSail) {
                     Items.destroyItem(source.getWurmId(), false, false);
-                    performer.getCommunicator().sendNormalServerMessage("You apply the sail kit to the ship.");
                 } else {
-                    performer.getCommunicator().sendNormalServerMessage("Your godly powers mean you can keep the sail kit after using it.");
+                    performer.getCommunicator().sendNormalServerMessage("Your godly powers mean you can keep the sail after using it.");
                 }
                 performer.getCommunicator().sendNormalServerMessage("The old sail was torn up as you took it off. You discard it.");
 
