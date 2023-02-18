@@ -19,7 +19,7 @@ public class SailFactory {
     public static int createSailItem(String identifier, String name){
         String modelName = "mod.tyoda.kingdomsails.sail."+identifier+".";
         ItemTemplateBuilder builder = new ItemTemplateBuilder(modelName)
-            .name(name, "sails", "A sail used to beepboop") // TODO
+            .name(name, "sails", "A sail used to change a ship's sail into a colorful new version. Surprisingly it fits on any ship you try it on.")
             .modelName(modelName)
             .itemTypes(new short[]{
                 ItemTypes.ITEM_TYPE_CLOTH,
@@ -44,7 +44,7 @@ public class SailFactory {
         if(template != null){
             if(KingdomSails.getInstance().sailsCraftable) {
                 CreationEntryCreator.createSimpleEntry(SkillList.CLOTHTAILORING, ItemList.needleCopper, ItemList.clothYard, template.getTemplateId(), false, true, 0.0F, false, false, CreationCategories.SAILS);
-                CreationEntryCreator.createSimpleEntry(SkillList.CLOTHTAILORING, ItemList.needleIron, ItemList.clothYard, template.getTemplateId(), false, true, 0.0F, false, false, CreationCategories.SAILS);
+                CreationEntryCreator.createSimpleEntry(SkillList.CLOTHTAILORING, ItemList.needleIron,   ItemList.clothYard, template.getTemplateId(), false, true, 0.0F, false, false, CreationCategories.SAILS);
             }
 
             return template.getTemplateId();
