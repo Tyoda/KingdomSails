@@ -1,9 +1,8 @@
 package org.tyoda.wurm.kingdomsails;
 
 import com.wurmonline.server.behaviours.BehaviourList;
-import com.wurmonline.server.items.ItemTemplate;
-import com.wurmonline.server.items.ItemTypes;
-import com.wurmonline.server.items.Materials;
+import com.wurmonline.server.items.*;
+import com.wurmonline.server.skills.SkillList;
 import com.wurmonline.shared.constants.IconConstants;
 import org.gotti.wurmunlimited.modsupport.ItemTemplateBuilder;
 
@@ -43,6 +42,11 @@ public class SailFactory {
         }
 
         if(template != null){
+            if(KingdomSails.getInstance().sailsCraftable) {
+                CreationEntryCreator.createSimpleEntry(SkillList.CLOTHTAILORING, ItemList.needleCopper, ItemList.clothYard, template.getTemplateId(), false, true, 0.0F, false, false, CreationCategories.SAILS);
+                CreationEntryCreator.createSimpleEntry(SkillList.CLOTHTAILORING, ItemList.needleIron, ItemList.clothYard, template.getTemplateId(), false, true, 0.0F, false, false, CreationCategories.SAILS);
+            }
+
             return template.getTemplateId();
         }else{
             return -10;
