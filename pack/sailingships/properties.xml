@@ -1,0 +1,14 @@
+<properties>
+	<SailingShip.wom>
+		<modelProperties>
+			<lod1>28</lod1>
+			<lod2>52</lod2>
+			<lod3>80</lod3>
+			<canHaveMountItems/>
+			<meshMask> 
+				<mesh>SailingShip</mesh>
+				<mask>ss_pm.dds</mask>
+			</meshMask>
+		</modelProperties>
+	</SailingShip.wom>
+</properties>

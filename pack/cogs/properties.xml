@@ -1,0 +1,42 @@
+<properties>
+	<Cog.wom>
+		<modelProperties>
+			<lod1>40</lod1>
+			<lod2>80</lod2>
+			<lod3>200</lod3>
+			<mask>cog_pm.dds</mask>
+		</modelProperties>
+		<jointProperties>
+			<NullMount0>
+				<standing/>
+			</NullMount0>
+			<NullMount1>
+				<standing/>
+			</NullMount1>
+			<NullMount2>
+				<standing/>
+			</NullMount2>
+			<NullMount3>
+				<standing/>
+			</NullMount3>
+			<NullMount4>
+				<standing/>
+			</NullMount4>
+			<NullMount5>
+				<standing/>
+			</NullMount5>
+			<NullMount6>
+				<standing/>
+			</NullMount6>
+			<NullMount7>
+				<standing/>
+			</NullMount7>
+			<NullMount8>
+				<standing/>
+			</NullMount8>
+		</jointProperties>
+	</Cog.wom>
+</properties>
+
+
+

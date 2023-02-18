@@ -1,0 +1,13 @@
+<properties>
+	<Knarr.wom>
+		<modelProperties>
+			<lod1>40</lod1>
+			<lod2>80</lod2>
+			<lod3>170</lod3>
+			<mask>knarr_pm.dds</mask>
+		</modelProperties>
+	</Knarr.wom>
+</properties>
+
+
+
