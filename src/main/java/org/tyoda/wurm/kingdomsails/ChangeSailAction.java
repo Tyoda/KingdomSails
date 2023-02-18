@@ -69,6 +69,14 @@ public class ChangeSailAction implements ModAction, ActionPerformer, BehaviourPr
     private boolean doAction(Action action, Creature performer, Item source, Item target, float counter){
 
         if (counter == 1.0f) {
+            float distance = Math.max(
+                    Math.abs(performer.getPosX()-target.getPosX()),
+                    Math.abs(performer.getPosY()-target.getPosY())
+            );
+            if(distance > 8) {
+                performer.getCommunicator().sendNormalServerMessage("You are too far away to change the sails on that ship.");
+                return true;
+            }
             if(!target.mayManage(performer)){
                 performer.getCommunicator().sendNormalServerMessage("You do not have permission to change sails on this ship.");
                 return true;
