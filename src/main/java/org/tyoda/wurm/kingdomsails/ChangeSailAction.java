@@ -68,7 +68,7 @@ public class ChangeSailAction implements ModAction, ActionPerformer, BehaviourPr
                 return true;
             }
             if(!target.mayManage(performer)){
-                performer.getCommunicator().sendNormalServerMessage("You do not have permission to change sails on this ship.");
+                performer.getCommunicator().sendNormalServerMessage("You do not have permission to change the sails on this ship.");
                 return true;
             }
 
