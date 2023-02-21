@@ -78,6 +78,7 @@ public class KingdomSails implements WurmServerMod, Versioned, ItemTemplatesCrea
     @Override
     public void onServerStarted() {
         ModActions.registerAction(new ChangeSailAction());
+        ModActions.registerAction(new RemoveSailAction());
     }
 
     @SuppressWarnings("deprecation")
