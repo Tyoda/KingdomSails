@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class KingdomSails implements WurmServerMod, Versioned, ItemTemplatesCreatedListener, PreInitable, ServerStartedListener, Configurable, PlayerMessageListener {
     public static final Logger logger = Logger.getLogger(KingdomSails.class.getName());
-    public static final String version = "1.0";
+    public static final String version = "1.1";
 
     public  boolean sailsCraftable = true;
 
